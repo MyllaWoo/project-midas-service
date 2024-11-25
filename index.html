@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="icon" href="imagens/logo-midas.jpg">
+    <title>Home - Midas</title>
+    <link rel= "stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Midas Serviços em Telecom</h1><br>
+        <span class="links">
+           <a href="index.html">Home</a>
+           <a href="servicos.html">Produto</a>
+           <a href="form.html">Orçamento</a>
+        </span>
+        
+        <!--Botão de compartilhar conteúdo-->
+        <div style="display: flex; justify-content: flex-start;">
+            <button class="share-button" onclick="compartilharPagina()">Compartilhe</button>
+        </div>
+        
+        <!--Botão do dark mode-->
+        <button id="toggle-dark-mode" aria-label="Alternar Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+<!-- Botão que abre o modal -->
+    <button id="openModalBtn">Abrir Modal</button>
+
+    <!-- Estrutura do modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Conteúdo do Modal</h2>
+            <p>Espaço de Imagens</p>
+            <!-- Exemplo de imagem dentro do modal -->
+            <img src="imagens/fusão2.jpg" alt="Exemplo de Imagem">
+            <img src="imagens/image-v5.jpg" alt="Exemplo de Imagem">
+            <img src="imagens/Padronização.jpg" alt="Exemplo de Imagem">
+            <img src="imagens/image-v6.jpg" alt="Exemplo de Imagem">
+            <p>Estas são algumas imagens dos nossos excelentes funcionários atendendo ao seu pedido!</p>
+        </div>
+    </div>
+
+    <!-- pagina inicial - home -->
+    <main>
+        <section class="Home">
+            <div class="home-test">
+                <h4 class="teste-h4">Bem vindo a <br/> Midas Serviços em Telecom</h4>
+                <h1 class="teste-h1"><strong> O seu projeto vira realidade com qualidade</strong></h1>
+                <p>Somos uma empresa com <strong>de 100 clientes</strong> que visa a qualidade de seus serviços,<br/> com <strong>padrão e eficiência</strong>, visando sempre atender as necessidades demandadas, <br/>realisando solicitações de forma coerente e <strong>de acordo com o seu desejo</strong>.</p>
+            </div>
+            <div class="carousel">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="imagens/logo-midas.jpg" alt="Imagem 1">
+                    <img src="imagens/fusão1.jpg" alt="Imagem 2">
+                    <img src="imagens/image-v3.jpg" alt="Imagem 3">
+                    <img src="imagens/tecnico4.jpg" alt="Imagem 3">
+                
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </section>
+
+        <!--Newsletter-->
+        <section class="newsletter" id="newsletterForm">
+            <h2>Assine nossa Newsletter</h2>
+            <p>Receba as últimas novidades diretamente no seu e-mail.</p>
+            <form id="newsletterForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Inscrever-se</button>
+            </form>
+            <p id="newsletterResponse"></p>
+        </section>
+    
+        <script src="script.js"></script>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+
+        <span class="bold">Midas Locações</span>
+        &copy; 2024 <br><br>
+        <div class="footer-content">
+            <div class="footer-section about">
+              <h3>Sobre Nós</h3>
+              <p>
+                Somos uma empresa dedicada a oferecer os melhores produtos e serviços.
+              </p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contato</h3>
+                <p>Email: midaslocacoes@hotmail.com</p>
+                <p>Telefone: (81) 98396-2640</p>
+            </div>
+           
+        </div>
+        <!-- mapa  -->
+         <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5583.66576952944!2d-35.97452083815145!3d-8.278104925281387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98b3c7c35c3d5%3A0x951e8af779d3b223!2sPGF%20Telecom!5e0!3m2!1spt-BR!2sbr!4v1730134114584!5m2!1spt-BR!2sbr;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!--Formulário para contato-->
+            <form class="contato" id="contactForm">
+                <h3>Entre em Contato</h3>
+                <div class="inputform">
+                    <span><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" class="input" placeholder="Nome">
+                </div>
+                <div class="inputform">
+                    <span><ion-icon name="paper-plane-outline"></ion-icon></span>
+                    <input type="email" class="input" placeholder="Email">
+                </div>
+                <div class="inputform">
+                    <span><ion-icon name="call-outline"></ion-icon></span>
+                    <input type="number" class="input" placeholder="Telefone">
+                    <br>
+                    <button class="botão">Enviar</button>
+                </div>
+                <p id="contactResponse"></p>
+            </form>
+         </div>
+        <!-- links redes sociais  -->
+        <nav class="redes">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100078483576684&mibextid=ZbWKwL" target="_blank">
+                        <img src="imagens/facebook.jpg" alt="acesso facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/washingtonmodesto7?igsh=MWp3bHlkYm0yeGtidg==" target="_blank">
+                        <img src="imagens/instagram.jpg" alt="acesso instagran">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
